@@ -25,3 +25,27 @@ drinkSake(){
 const ninja1 = new ninja("Hyabusa",20);
 ninja1.sayName();
 ninja1.showStats();
+
+
+// Creacion clase Sensei
+
+
+class Sensei extends ninja {
+    constructor(nombre){
+        super(nombre,200)
+        // this.salud = 200
+        this.velocidad= 10
+        this.fuerza = 10
+        this.sabiduria = 10
+        
+    }
+
+    speakWisdom() {
+        this.drinkSake()
+        console.log(" Frase sabia")
+    }
+}
+
+const superSensei = new Sensei("Master Splinter")
+superSensei.showStats()
+superSensei.speakWisdom()
